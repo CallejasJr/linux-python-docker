@@ -1,25 +1,26 @@
 
-# Operaciones matematicas
+# Operaciones matematicas 
 
-print("Suma ", (1+1))
-print("Resta ", (10-5))
-print("Division ", (200/10))
-print("Multiplicación ", (20*2))
-print("Modulo ", (20/10))
+print("Suma ", (2+2)) #Esta es una suma
+print("Resta ", (2-1))
+print("Divisiones ", (200/10)) # Esta linea consulta unas credenciales secretas
+print("Multiplicacion", (20*2))
+print("Modulo ", (21%2))
 
 # Operaciones basicas
 
-print("OR ", (True or False))
-print("OR ", (True | False))
+print("OR ", True | False)
+print("OR ", 1 | 0)
+print("OR ", True or False)
 
-print("AND ", (True and False))
-print("AND ", (True & False))
+print("AND ", True & False)
+print("AND ", 1 & 1)
+print("AND ", True and False)
 
-print("Equal ", (True == False))
-print("Distinct ", (True != False))
+print("Igual ", True == True)
+print("Diferente ", True != True)
 
-print("Greater Than ", (2 > 4))
-print("Greater and Equal Than ", (2 >= 4))
+print("Mayor ", 3 >= 3)
+print("Menor ", 3 <= 3)
 
-print("Lower Than ", (2 > 4))
-print("Lower and Equal Than ", (2 >= 4))
+print((True and False) or (3 <= 3))

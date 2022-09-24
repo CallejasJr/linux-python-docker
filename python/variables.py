@@ -1,124 +1,205 @@
 
-# Variables con numeros enteros
-my_first_number = 30
-my_second_number = 20
+# Numeros enteros
+mi_numero = 20
+"""
+print("entero", mi_numero, "tipo", type(mi_numero))
 
-my_first_number += 1 # my_first_number + 1
-print(my_first_number)
-my_first_number -= 1 # my_first_number - 1
-print(my_first_number)
+print("sumar uno", mi_numero + 1)
+print("mi numero", mi_numero)
 
-print("Suma ", (my_first_number+my_second_number))
- 
-diff = my_first_number - my_second_number # Almacenando operaciones con variables
-print("Resta ", diff)
+mi_numero = mi_numero + 1
+print("mi numero", mi_numero)
 
-myFloatVar = 2431/231 # Variables con punto flotante
-print("Division ", myFloatVar)
+mi_numero -= 1
+print("mi numero", mi_numero)
 
-#Variables tipo string
-my_hello_world = "Hola Mundo"
-print(my_hello_world)
-print("Este es mi ", my_hello_world)
+mi_numero_2 = 10
+print("Suma de variables", mi_numero+mi_numero_2)
+"""
+# Numeros flotantes
+mi_numero_flotante = 20.35
+"""
+print("flotante", mi_numero_flotante, "tipo", type(mi_numero_flotante))
 
-# Variables booleanas
-my_true = True
-my_false = False
-print("OR ", (my_true | my_false))
-print("AND ", (my_true and my_false))
+print(mi_numero+mi_numero_flotante)
 
-# Variables tipo listas
+mi_numero_flotante_2 = 50/20
+print("flotante", mi_numero_flotante_2, "tipo", type(mi_numero_flotante_2))
+"""
 
-my_list = [1, 2, 3, 4]
+# Cadenas de caracteres
+'''
+mi_string = "Hola mundo"
+mi_string_2 = 'Hola mundo'
 
-print(my_list[0])
+print(mi_string, type(mi_string))
+print(mi_string_2, type(mi_string_2))
 
-my_list.append(5)
-print(my_list)
+print(mi_string[0])
+print(mi_string[-1])
 
-my_list.pop()
-print(my_list)
+print(mi_string[0:2])
+print(mi_string[:2])
+print(mi_string[-2:])
 
-print("El item 2 esta en la posicion: ", my_list.index(2))
-print(my_list[my_list.index(3)])
+print(len(mi_string))
+print(mi_string.find("Hola") >= 0)
+print(mi_string.find("caso") >= 0)
 
-three_idx = my_list.index(3)
-print(my_list[three_idx])
+print(mi_string.replace("mundo", "Mario"))
 
-my_list_2 = [1, 23.2, True, "Hola"]
-print(my_list_2)
+mi_string_3 = "Hola " + "mundo"
+print(mi_string_3)
 
-my_list_2.insert(3, "Mundo")
-print(my_list_2)
+mi_string_3 = "Hola "*10
+print(mi_string_3)
 
-my_list_2[3] = "mundo"
-print(my_list_2)
+mis_alumnos = """
+mario callejas cabarcas,
+antonio martinez gonzalez
+"""
+mis_alumnos = mis_alumnos.replace("\n", "")
 
-print(len(my_list_2))
+print(mis_alumnos.split(","))
 
-print("mundo" in my_list_2)
-print("mundo" not in my_list_2)
+# Listas
+mi_lista = mis_alumnos.split(",")
+print(mi_lista[1])
+'''
 
-# Variables tipo diccionario
+"""
+mi_lista_2 = [1, 2, 3, 4, "Mario", 94.5, 12, 123, 345, "Mario"]
+print(mi_lista_2)
+print(len(mi_lista_2))
 
-my_dict = {"key1": 1, "key2": 2}
-print(my_dict)
-print(my_dict["key1"])
+mi_lista_2.append(5)
+print(mi_lista_2)
 
-my_dict.update({"key2": 3})
-print(my_dict)
+print(mi_lista_2.index("Mario"))
 
-print(my_dict.items())
+primer_mario = mi_lista_2.index("Mario")
+print(mi_lista_2[:primer_mario])
 
-print(my_dict.keys())
-print(my_dict.values())
+segundo_mario = primer_mario + mi_lista_2[primer_mario+1:].index("Mario") + 1
 
-print(my_dict.get("key1", "No existe"))
-print(my_dict.get("key3", "No existe"))
+print(primer_mario, segundo_mario)
+print(mi_lista_2[primer_mario+1:segundo_mario])
 
-my_dict["key3"] = "4"
-print(my_dict)
+mi_lista_2[1] = 10
+print(mi_lista_2)
 
-my_dict.pop("key3")
-print(my_dict)
+print(94.5 in mi_lista_2)
+print(94.5 not in mi_lista_2)
 
-my_dict_2 = {
+mi_lista_2.pop()
+print(mi_lista_2)
+"""
+"""
+# Diccionarios
+
+mi_diccionario = {"key1": 1, "key2": 2} # Tipo de dato que permite relacionar una llave con un valor 
+print(mi_diccionario)
+
+print("Accediendo a key1 ->", mi_diccionario["key1"])
+print("Accediendo a key2 ->", mi_diccionario["key2"])
+
+# Las llaves deben ser unicas
+# llave:valor
+mi_diccionario_2 = {
     "number": 1,
     2: "number",
     True: 2.3,
-    2.3: False
+    2.3: True,
+    2.4: "number"
 }
 
-print(my_dict_2)
-print(my_dict_2["number"])
-print(my_dict_2[True])
-print(my_dict_2[2])
-print(my_dict_2[2.3])
+print(mi_diccionario_2)
+print(mi_diccionario_2["number"])
+print(mi_diccionario_2[2])
+print(mi_diccionario_2[True])
+print(mi_diccionario_2[2.3])
+print(mi_diccionario_2[2.4])
 
-my_dict_2 = {
-    "nombre": "Juan",
-    "edad": 23,
-    "genero": "M",
-    "activo": False
+mi_estudiante = {
+    "nombre": "Pepito",
+    "apellido": "Perez",
+    "edad": 20
+}
+print(mi_estudiante)
+
+mi_estudiante["nombre"] = "Juanito"
+print(mi_estudiante)
+
+mi_estudiante.update({"apellido": "Mora"})
+print(mi_estudiante)
+
+mi_estudiante_copia = mi_estudiante.copy()
+
+mi_estudiante["nota1"] = 450
+print(mi_estudiante)
+
+mi_estudiante.update({"nota2": 50})
+print(mi_estudiante)
+
+print(mi_estudiante_copia)
+
+nota_final = mi_estudiante["nota1"] + mi_estudiante["nota2"]
+print(f"La nota final del estudiante {mi_estudiante['nombre']} es {nota_final}")
+
+print(mi_estudiante.items()) # Retorna una lista de tuplas (tipo de dato inmutable - no se puede modificar), que contienen SIEMPRE en la primera posicion de cada tupla, la llave y en la segunda, el valor
+
+print(mi_estudiante.keys())
+print(mi_estudiante.values())
+
+#print(mi_estudiante["nota3"])
+print(mi_estudiante.get("nota2", 0))
+print(mi_estudiante.get("nota3", 0))
+
+print(mi_estudiante)
+
+mi_diccionario_3 = {
+    "lista": [1, "hola", True, 2.4],
+    "diccionario": {"key1": 1, 1:"mundo"},
+    "tupla": (3,4)
 }
 
-print(my_dict_2["nombre"] == "Mario")
+print(mi_diccionario_3)
+print(mi_diccionario_3["lista"][1])
+print(mi_diccionario_3["diccionario"]["key1"])
+print(mi_diccionario_3["tupla"][0])
 
-my_students = [
-    {
-        "nombre": "Juan",
-        "edad": 23,
-        "genero": "M",
-        "activo": False
-    },
-    {
-        "nombre": "Maria",
-        "edad": 25,
-        "genero": "F",
-        "activo": True
-    }
-]
+mi_lista_4 = [mi_diccionario_3, 2, True, "Mundo"]
+print(mi_lista_4[0]["lista"][1])
+"""
+"""
+# Conversion de entero a string
+mi_entero = 23
+mi_entero_str = str(mi_entero)
+print(f"mi entero es {mi_entero}, su tipo es {type(mi_entero)}")
+print(f"mi entero string es {mi_entero_str}, su tipo es {type(mi_entero_str)}")
 
-student_number = 0
+# Conversion de string a entero
+mi_entero_str = "25"
+mi_entero = int(mi_entero_str)
+print(f"mi entero es {mi_entero}, su tipo es {type(mi_entero)}")
+print(f"mi entero string es {mi_entero_str}, su tipo es {type(mi_entero_str)}")
 
-print("El/La estudiante ", my_students[student_number]["nombre"], " esta en estado ",my_students[student_number]["activo"] == True)
+# Conversion de string a float
+mi_flotante_str = "35.45"
+mi_flotante = float(mi_flotante_str)
+print(f"mi flotante es {mi_flotante}, su tipo es {type(mi_flotante)}")
+print(f"mi flotante string es {mi_flotante_str}, su tipo es {type(mi_flotante_str)}")
+
+# Conversion de float a str
+mi_flotante = 35.45
+mi_flotante_str = str(mi_flotante)
+print(f"mi flotante es {mi_flotante}, su tipo es {type(mi_flotante)}")
+print(f"mi flotante string es {mi_flotante_str}, su tipo es {type(mi_flotante_str)}")
+"""
+
+# Ejercicio
+mi_entero_str = "212314-ha2na092"
+mi_entero_split = mi_entero_str.split("-")
+print(mi_entero_split)
+mi_entero = int(mi_entero_split[0])
+print(f"mi entero es {mi_entero}, su tipo es {type(mi_entero)}")
