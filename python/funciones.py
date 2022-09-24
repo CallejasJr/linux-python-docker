@@ -1,26 +1,30 @@
+"""
+def suma(num_1, num_2):
+    result = num_1 + num_2
+    return result
 
-def suma(a, b):
-    return a + b
+number_1 = 10
+number_2 = 100
+response = suma(number_1, number_2)
+print(response)
 
-print(suma(2, 4))
+a = 100
+b = 500
+response_2 = suma(a, b)
+print(response_2)
 
-def get_list(lista, idx):
-    return lista[idx]
+response_3 = suma(97, 100)
+print(response_3)
+"""
+# get en una lista
 
-my_list = [12, 13, 14]
-print(get_list(my_list, 2))
-
-def get_list(lista, idx, if_not_exist=None):
+def get_list(my_list, idx, if_not_exist=None):
     try:
-        return lista[idx]
+        my_item = my_list[idx]
     except IndexError:
-        return if_not_exist
+        my_item = if_not_exist
+    return my_item
 
-my_list = [12, 10, 14]
-print(get_list(my_list, 2))
-print(get_list(my_list, 3))
-print(get_list(my_list, 1, "No existe"))
-print(get_list(my_list, 3, "No existe"))
+lista = ["hola", "mundo", "en", "diplomado", "IoT"]
 
-small_func = lambda x, y: x+y
-print(small_func(2, 5))
+print(get_list(my_list=lista, idx=20))

@@ -1,10 +1,4 @@
 
-countries = ["Colombia", "Francia", "Argentina", "Brasil"]
-
-presentation = "Hola mundo desde "
-
-idx = 0
-
-print(presentation, countries[idx])
-
-print(f"Hola mundo desde {countries[idx]}")
+idx = 3
+paises = ["Brasil", "Colombia", "Ecuador", "Venezuela"]
+print(f"Hola mundo desde {paises[idx]}")

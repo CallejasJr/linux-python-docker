@@ -1,3 +1,3 @@
-print("Hola mundo")
+print("Hola Mundo")
 
-print("Mi nombre es", input("Ingresa tu nombre: "))
+print("Tu nombre es", input("Ingresa tu nombre: ")) #PEP8
