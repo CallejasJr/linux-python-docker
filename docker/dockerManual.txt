@@ -1,0 +1,31 @@
+Docker Hub: https://hub.docker.com/search?image_filter=official&q=
+
+Version de docker: docker --version
+
+Listar imagenes: docker images 
+
+Listar procesos: docker ps
+
+Listar contenedores: docker container ls --all
+
+Descargar una imagen: docker pull <image_name>
+
+Ejecutar una imagen: docker run --name <container_name> <image_name>
+
+Ejecutar una imagen que se elimina el contenedor al terminar: docker run --rm <image_name>
+
+Ejecutar una imagen en background: docker run -d <image_name>
+
+Ejecutar una imagen en mapeando un puerto: docker run -p 8000:8000 <image_name>
+
+Ver logs de un contenedor: docker logs -f <container_name>
+
+Deneter un contenedor: docker stop <container_name o container_id>
+
+Eliminar un contenedor: docker rm <container_name o container_id>
+
+Elimunar una imagen: docker image rm <image_name or image_id>
+
+Elimunar una imagen forzada: docker image rm -f <image_name or image_id>
+
+Acceder a un contenedor: docker exec -it <container_name> bash
